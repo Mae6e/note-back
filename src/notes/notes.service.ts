@@ -11,7 +11,7 @@ export class NotesService {
   ) {}
 
   findAll(): Promise<Note[]> {
-    return this.notesRepository.find();
+    return this.notesRepository.find({order: {created_at: 'DESC'}});
   }
 
   findOne(id: number) {
@@ -25,7 +25,7 @@ export class NotesService {
   update(id: number, updateData:Partial<Note>): Promise<any> {
     return this.notesRepository.save({
       id,
-      updateData
+      title : updateData.title
   });
   }
 

@@ -7,18 +7,18 @@ POST  http://localhost:3000/notes
 Content-Type: application/json
 
 {
-  "name":"read book"
+  "title":"read book"
 }
 
 ### get a note
 GET http://localhost:3000/notes/1
 
 ### update a note
-PATCH  http://localhost:3000/notes/1
+PATCH  http://localhost:3001/notes/7
 Content-Type: application/json
 
 {
-  "name":"read book"
+  "title":"read book1"
 }
 
 ### delete a note

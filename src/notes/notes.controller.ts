@@ -22,7 +22,7 @@ export class NotesController {
   }
 
   @Patch(':id')
-  async update(@Param('id') id: string, @Body() updateData: Partial<Note>)  {
+  async update(@Param('id') id: string, @Body() updateData: Partial<Note>) {
     return this.notesService.update(+id,updateData);
  }
 

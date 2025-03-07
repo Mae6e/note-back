@@ -6,7 +6,7 @@ export class Note {
   id: number;
 
   @Column()
-  name: string;
+  title: string;
 
   @CreateDateColumn()
   created_at: Date;
