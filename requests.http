@@ -1,0 +1,25 @@
+
+### list of notes
+GET  http://localhost:3000/notes
+
+### create a new note
+POST  http://localhost:3000/notes
+Content-Type: application/json
+
+{
+  "name":"read book"
+}
+
+### get a note
+GET http://localhost:3000/notes/1
+
+### update a note
+PATCH  http://localhost:3000/notes/1
+Content-Type: application/json
+
+{
+  "name":"read book"
+}
+
+### delete a note
+DELETE http://localhost:3000/notes/2
