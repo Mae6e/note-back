@@ -27,4 +27,4 @@ RUN pnpm install  --prod
 
 EXPOSE 3001
 
-CMD ["pnpm", "run", "start", "--env-file=.env"]
+CMD ["pnpm", "run", "start"]
