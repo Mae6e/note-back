@@ -21,6 +21,7 @@ WORKDIR /app
 COPY --from=build /app/dist /app/dist
 COPY --from=build /app/pnpm-lock.yaml ./
 COPY --from=build /app/package.json ./
+COPY .env .env
 
 RUN pnpm install  --prod
 
