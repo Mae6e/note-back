@@ -15,7 +15,6 @@ RUN pnpm run build
 FROM node:22-alpine
 
 RUN npm install -g pnpm
-RUN npm install -g @nestjs/cli
 
 WORKDIR /app
 
