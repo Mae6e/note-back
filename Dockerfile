@@ -21,10 +21,9 @@ WORKDIR /app
 COPY --from=build /app/dist /app/dist
 COPY --from=build /app/pnpm-lock.yaml ./
 COPY --from=build /app/package.json ./
-COPY .env .env
 
 RUN pnpm install  --prod
 
 EXPOSE 3001
 
-CMD ["pnpm", "run", "start"]
+CMD ["node", "dist/main"]
