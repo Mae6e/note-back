@@ -1,9 +1,9 @@
 
 ### list of notes
-GET  http://localhost:3000/notes
+GET  http://localhost:3001/notes
 
 ### create a new note
-POST  http://localhost:3000/notes
+POST  http://localhost:3001/notes
 Content-Type: application/json
 
 {
@@ -11,7 +11,7 @@ Content-Type: application/json
 }
 
 ### get a note
-GET http://localhost:3000/notes/1
+GET http://localhost:3001/notes/1
 
 ### update a note
 PATCH  http://localhost:3001/notes/7
@@ -22,4 +22,4 @@ Content-Type: application/json
 }
 
 ### delete a note
-DELETE http://localhost:3000/notes/2
+DELETE http://localhost:3001/notes/2

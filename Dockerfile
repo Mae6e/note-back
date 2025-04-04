@@ -1,4 +1,4 @@
-FROM node:22-alpine AS build
+FROM node:22-alpine
 
 RUN npm install -g pnpm
 
@@ -12,18 +12,6 @@ COPY . .
 
 RUN pnpm run build
 
-FROM node:22-alpine
-
-RUN npm install -g pnpm
-
-WORKDIR /app
-
-COPY --from=build /app/dist /app/dist
-COPY --from=build /app/pnpm-lock.yaml ./
-COPY --from=build /app/package.json ./
-
-RUN pnpm install  --prod
-
 EXPOSE 3001
 
-CMD ["node", "dist/main"]
+CMD ["pnpm","run", "start:prod"]
